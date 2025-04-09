@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Interativa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+            transition: background-color 0.5s;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+        }
+        .container {
+            padding: 20px;
+        }
+        img {
+            width: 30%;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #008cba;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #005f73;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à Minha Página</h1>
+    </header>
+    <div class="container">
+        <h2>Sobre esta página</h2>
+        <p>Esta é uma página de exemplo de melhores desenhos.</p>
+        
+        <h2>Galeria de Imagens</h2>
+        <img src="https://th.bing.com/th/id/R.b33ed24f76351b9ce132bf36f6562c4f?rik=vgkcnFLU08u%2buQ&riu=http%3a%2f%2fpt.hdwall365.com%2fwallpapers%2f1510%2fRio-2-cartoon-movie_1920x1080_wallpaper.jpg&ehk=Vo1xXaUoEcZUpoZdlSUQnwixzE7iQKFgkkSLKLE%2fmQw%3d&risl=&pid=ImgRaw&r=0" alt="Imagem 1">
+        <img src="https://uproxx.com/wp-content/uploads/2015/04/lilo-and-stitch.jpg" alt="Imagem 2">
+        <img src="https://cdn.wallpapersafari.com/13/21/MXLATv.jpg" alt="Imagem 3">
+        
+        <h2>Interação</h2>
+        <p>Clique no botão abaixo para alterar a cor de fundo da página.</p>
+        <button onclick="mudarCorFundo()">Mudar Cor de Fundo</button>
+    </div>
+    <footer>
+        <p>&copy; 2025 Minha Página. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script>
+        function mudarCorFundo() {
+            const cores = ['#f4f4f4', '#ffddc1', '#c1ffd7', '#c1caff'];
+            const corAtual = document.body.style.backgroundColor;
+            let novaCor;
+            do {
+                novaCor = cores[Math.floor(Math.random() * cores.length)];
+            } while (novaCor === corAtual);
+            document.body.style.backgroundColor = novaCor;
+        }
+    </script>
+</body>
+</html>
